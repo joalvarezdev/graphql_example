@@ -1,0 +1,26 @@
+# Solo sirve para consultar datos
+type Query {
+  findStudentById(studentId: String) : Student
+  findAllStudents : [Student]
+}
+
+# Crear update
+type Mutation {
+  createStudent(student : StudentDTO) : String
+  deleteStudentById(id : String) : String
+}
+
+type Student {
+  id: ID,
+  name: String,
+  lastname: String,
+  age: Int
+}
+
+input StudentDTO {
+  id: ID,
+  name: String,
+  lastname: String,
+  age: Int,
+  id_course: Int!
+}

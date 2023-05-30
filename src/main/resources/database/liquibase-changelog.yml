@@ -1,0 +1,37 @@
+databaseChangeLog:
+  - changeSet:
+      id: 02-ddl/courses
+      author: joalvarez
+      runOnChange: true
+      changes:
+        - sqlFile:
+            path: ddl/02-courses.sql
+            relativeToChangelogFile: true
+            endDelimiter: ;
+  - changeSet:
+      id: 01-ddl/students
+      author: joalvarez
+      runOnChange: true
+      changes:
+        - sqlFile:
+            path: ddl/01-students.sql
+            relativeToChangelogFile: true
+            endDelimiter: ;
+  - changeSet:
+      id: 01-dml/courses
+      author: joalvarez
+      runOnChange: true
+      changes:
+        - sqlFile:
+            path: dml/01-courses.sql
+            relativeToChangelogFile: true
+            endDelimiter: ;
+  - changeSet:
+      id: 02-dml/students
+      author: joalvarez
+      runOnChange: true
+      changes:
+        - sqlFile:
+            path: dml/02-students.sql
+            relativeToChangelogFile: true
+            endDelimiter: ;
